@@ -1,17 +1,24 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      About Us
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-grid>
+    Hi! My name is Viona Angelica, and I'm an Informatic Student in Petra Christian University. <br>
+    I like writing, drawing, and public speaking.
+    I also like games, so let's play a game!<br><br>
+    <b>Guess a number from 1 to 10! If you guess correctly, you'll see my profile pic</b>
+  </ion-grid>
+  <ion-grid>
+    <ion-input [(ngModel)]="inputNum" placeholder="Guess a number"></ion-input>
+  </ion-grid>
+  <ion-grid>
+    <ion-button (click)="check()">Guess!</ion-button>
+  </ion-grid>
+ 
+  <ion-img id="Profile"[src]="profpic"></ion-img>
 </ion-content>
